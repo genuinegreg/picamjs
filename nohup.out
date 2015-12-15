@@ -1,0 +1,8 @@
+shoot 2015-12-15_12:20:22.74
+picture shooted [ '', '' ]
+resize /var/caddy/picamjs/2015-12-15_12:20:22.74_1full.jpg undefined undefined
+resize /var/caddy/picamjs/2015-12-15_12:20:22.74_2hd.jpg 1280 undefined
+resize /var/caddy/picamjs/2015-12-15_12:20:22.74_3md.jpg 640 undefined
+resize /var/caddy/picamjs/2015-12-15_12:20:22.74_4sd.jpg 320 undefined
+all resize good, removing raw file
+all good, adding ref to list.txt

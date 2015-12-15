@@ -1,4 +1,5 @@
 {
-  "interval": 60000,
-  "reverse": true
+  "interval": 30,
+  "reverse": true,
+  "path": "/var/caddy/picamjs"
 }

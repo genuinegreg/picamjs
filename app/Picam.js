@@ -53,6 +53,7 @@ class Picam {
     var date = moment().format(this.options.dateFormat);
     console.log('shoot', date);
     var rawPath = path.join(this.options.path, `${date}_0raw.jpg`);
+    var listPath = path.join(this.options.path, 'list.txt');
 
     var reverse = this.options.reverse;
 
@@ -71,7 +72,8 @@ class Picam {
         return this._rm(rawPath);
       })
       .then(() => {
-        console.log('all good');
+        console.log('all good, adding ref to list.txt');
+        return Q.nfcall(fs.appendFile, listPath, `${date}\n`);
       })
       .catch((err) => {
         console.error('error', err);
