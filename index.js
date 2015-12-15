@@ -1,4 +1,4 @@
-var Picam = require('./app/Picam');
+var Picam = require('./lib/Picam');
 var config = require('./config');
 // config.path =
 
