@@ -1,0 +1,82 @@
+<html>
+<head>
+    <!-- Angular Material style sheet -->
+    <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.css">
+</head>
+<body ng-app="picam" ng-cloak>
+<!--
+  Your HTML content here
+-->
+
+<md-content ng-controller="mainController" flex layout-padding>
+    <h1>Yo</h1>
+
+    <!--<ul>-->
+    <!--<li ng-repeat="pic in pics">{{pic}}</li>-->
+    <!--</ul>-->
+
+    <md-grid-list
+            md-cols-sm="1" md-cols-md="2" md-cols-gt-md="6"
+            md-row-height-gt-md="1:1" md-row-height="2:2"
+            md-gutter="12px" md-gutter-gt-sm="8px">
+        <md-grid-tile ng-repeat="pic in pics"
+                      md-rowspan="1" md-colspan="1" ng-class="pic.color"
+                      style="overflow: hidden">
+
+
+            <img ng-src="{{pic.url}}" alt="{{pic.name}}" class="pic"/>
+
+            <md-grid-tile-footer>
+                <h3>{{pic.name}}</h3>
+            </md-grid-tile-footer>
+        </md-grid-tile>
+    </md-grid-list>
+</md-content>
+
+<!-- Angular Material requires Angular.js Libraries -->
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-aria.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-messages.min.js"></script>
+
+<!-- Angular Material Library -->
+<script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.js"></script>
+
+<!-- Your application bootstrap  -->
+<script src="./index.js"></script>
+
+
+<style type="text/css">
+
+    .pic {
+        height:100%;
+        width:100%;
+    }
+
+    .gray {
+        background: #f5f5f5;
+    }
+
+    .green {
+        background: #b9f6ca;
+    }
+
+    .yellow {
+        background: #ffff8d;
+    }
+
+    .blue {
+        background: #84ffff;
+    }
+
+    .purple {
+        background: #b388ff;
+    }
+
+    .red {
+        background: #ff8a80;
+    }
+</style>
+
+</body>
+</html>
