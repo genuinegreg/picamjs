@@ -8,7 +8,7 @@ var c = 0;
 
 
 app.controller('mainController', function ($scope, $http) {
-    $http.get('./list.txt').then((res) => {
+    $http.get('./pics/list.txt').then((res) => {
         return res.data.split('\n');
     }).then((pics) => {
         return pics.filter((pic) => {
@@ -16,7 +16,10 @@ app.controller('mainController', function ($scope, $http) {
         }).map((pic) => {
             return {
                 name: pic,
-                url: 'test.jpg',
+                url: '/pics/'+pic + '_1full.jpg',
+                url_hd: '/pics/'+pic + '_2hd.jpg',
+                url_md: '/pics/'+pic + '_3md.jpg',
+                url_sd: '/pics/'+pic + '_4sd.jpg',
                 color: colors[Math.floor(Math.random() * colors.length)]
             }
         });
